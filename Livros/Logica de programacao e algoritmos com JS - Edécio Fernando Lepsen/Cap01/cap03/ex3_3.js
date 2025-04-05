@@ -1,0 +1,6 @@
+const prompt = require("prompt-sync")()
+const salario = Number(prompt("Qual salario?"))
+const anos = Number(prompt("Quantos anos trabalha na empresa?"))
+const acrescimo = (anos / 4).toFixed(0)
+const novoSalario = (((acrescimo * 0.01) * salario) + salario) 
+console.log(`Direito a ${acrescimo} quadrienios\nSeu novo salario e R$${novoSalario}`)
