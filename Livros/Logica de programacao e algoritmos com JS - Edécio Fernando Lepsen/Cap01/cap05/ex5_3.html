@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="img/png" href="img/ex5_1.png">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Exemplo 5.2</title>
+
+</head>
+<body>
+    <script>
+
+        let number
+        
+        do {
+            num = Number(prompt("Numero: "))
+            if (num == 0 || isNaN(num)){
+                alert("Digite um numero valido: ")
+            }
+        } while (num == 0 || isNaN(num))
+        let pares = `Pares entre 1 e ${num}: `
+        for (let i = 2; i <= num; i = i + 2){
+            pares = pares + i +", "
+        }
+        alert(pares)
+    </script>
+</body>
+</html>
