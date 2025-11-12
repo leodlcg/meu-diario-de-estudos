@@ -1,7 +1,13 @@
 public class GeladeiraMain {
     public static void main(String[] args) {
         Geladeira g = new Geladeira("Inox", "Brastemp", 220, 7.4, true);
+        Geladeira h = new Geladeira("Branca", "Brastemp", 110, 7.4, true);
         System.out.println(g.getMarca() + ", " + g.getCor() + ", " + g.getVoltagem() + ", " + g.getTemperaturaAtual() + ", " + g.isPortaAberta());
+        System.out.println(h.getMarca() + ", " + h.getCor() + ", " + h.getVoltagem() + ", " + h.getTemperaturaAtual() + ", " + h.isPortaAberta());
+
+        Geladeira Leonardo = new Geladeira("Inox", "Brastemp", 220, 7.4, false);
+        System.out.println(Leonardo.getMarca() + ", " + Leonardo.getCor() + ", " +Leonardo.getVoltagem() + ", " + Leonardo.getTemperaturaAtual() + ", " + Leonardo.isPortaAberta());
+
     }
 }
 
