@@ -1,0 +1,51 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../imgs/cenarios/planoFundo/BackgroundBody.jpg");
+    background-size: cover;
+}
+
+/* Gameloop visível */
+#GameBoard {
+     /* controla o layout dos filhos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     /* permite que filhos absolute usem este elemento como referência para se mover */
+    position: relative;
+     /* controla o tamanho da div */
+    width: 75%;
+    height: 100%;
+}
+
+/* TV sempre no centro */
+#imgTvVelha {
+    position: relative;
+    width: 70%;
+    height: 90%;
+}
+
+/* ============================================================================== */
+/* CENÁRIO DENTRO DA TV*/
+#Game {
+    position: absolute;
+    width: 49%;
+    height: 48.5%;
+    top: 13.2%;
+    right: 30.9%;
+
+}
+
+#imgPlanoFundo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+/* ============================================================================== */
