@@ -1,0 +1,39 @@
+#sobre{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 15px;
+    background-color: gray;
+}
+
+#divSobreImg{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    width: clamp(0px, 50vw, 500px);
+    background-color: antiquewhite;
+    word-break: break-all;
+}
+
+#imgSobre {
+    width: clamp(0px, 50vw, 500px);
+    height: auto;
+}
+
+#divSobreText{
+    display: flex;
+    flex-direction: column;
+    width: clamp(0px, 50vw, 500px);
+    background-color: antiquewhite;
+    word-break: break-all;
+}
+
+#tituloSobre{
+    margin: 0;
+    margin-top: 50px;
+}
+
+#textoSobre{
+
+}

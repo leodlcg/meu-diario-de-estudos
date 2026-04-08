@@ -1,0 +1,27 @@
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: aqua;
+  margin: 0;
+  box-sizing: border-box; /* evita estourar por padding */
+}
+
+#menu {
+  background-color: blueviolet;
+  padding: 2vh 2vw; /* espaçamento interno responsivo */
+  display: flex;        /* adicionado */
+  justify-content: center;
+  align-items: center;  /* centraliza verticalmente */
+}
+
+#menuNav {
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 6vw, 96px); /* mínimo, fluido, máximo */
+  flex-wrap: wrap; /* quebra linha no mobile se necessário */
+}
+
+.linkMenu {
+  font-size: clamp(14px, 3vmin, 24px); /* mínimo, fluido, máximo */
+  color: white;
+}
