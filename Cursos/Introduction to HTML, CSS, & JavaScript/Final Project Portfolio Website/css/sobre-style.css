@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 15px;
+    margin-top: 100px;
 }
 
 #divSobreImg{
@@ -15,7 +15,7 @@
 }
 
 #imgSobre {
-    width: clamp(0px, 50vw, 500px);
+    width: clamp(0px, 50vw, 300px);
     height: auto;
 }
 
