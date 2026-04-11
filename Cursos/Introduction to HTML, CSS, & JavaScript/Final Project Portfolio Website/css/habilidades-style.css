@@ -1,68 +1,280 @@
-#habilidades{
+#habilidadesSection{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 100%;
-    margin-top: 15px;
-    background-color: gray;
 }
 
-#divHabilidades{
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    width: clamp(0px, 100vw, 1300px);
-    gap: clamp(8px, 10vw, 146px);
-    flex-wrap: wrap;
-    background-color: antiquewhite;
-
+#habilidadesResponsiva{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
 }
 
-.divHabilidadesEspecifica {
-    display: flex;
-    flex-direction: column; /* empilha imagem e texto */
-    align-items: center;    /* centraliza horizontalmente */
-    justify-content: center; /* centraliza verticalmente */
-    width: clamp(0px, 40vw, 200px);
-    height: auto;
-    word-break: break-all;
-    text-align: center;
-    background-color: yellow;
+
+
+
+#topicoHabilidades{
+
+  font-size: 50px;
+  font-family: "Matemasie", sans-serif;
+  color: #F2E852;
+  padding-bottom: 20px;
+  transition: transform 0.2s;
+  flex-wrap: wrap;
+  word-break: break-all;
+  
 }
 
-.imgsHabilidadesEspecifica{
-    width: clamp(0px, 10vw, 200px);
-    height: auto;
+#topicoHabilidades:hover{
+
+  font-size: 50px;
+  font-family: "Matemasie", sans-serif;
+  color: #F2E852;
+  padding-bottom: 20px;
+  transition: transform 0.2s;
+  transform: scale(1.2);
+  flex-wrap: wrap;
+  word-break: break-all;
+  
 }
 
-.tituloHabilidadesEspecifica{
-    margin: 0;
+
+.container
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px 0;
 }
 
-/* TESTE DE EFEITOS: */
-
-.hover-underline {
-  font-size: 2rem;
-  color: #ffffff;
+.container .box
+{
   position: relative;
-  display: inline-block;
+  width: 320px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 30px;
+  transition: 0.5s;
 }
 
-.hover-underline::after{
-  content: '';
+.container .box::before
+{
+  content:' ';
   position: absolute;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(to right, #ff0000, #00ffff);
-  bottom: -5px;
+  top: 0;
+  left: 80px;
+  width: 50%;
+  height: 100%;
+  text-decoration: none;
+  background: #fff;
+  border-radius: 8px;
+  transition: 0.5s;
+}
+
+.container .box::after
+{
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 50;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  border-radius: 8px;
+  transition: 0.5s;
+  filter: blur(10px); /* blur da cor do fundo grande pos animacao */
+}
+
+.container .box:hover:before,
+.container .box:hover:after
+{
+  transform: skewX(0deg);
+  left: 20px;
+  width: calc(100% - 90px);
+  
+}
+
+.container .box:nth-child(1):before,
+.container .box:nth-child(1):after
+{
+  background: linear-gradient(315deg, #FF6D00, #E53935)
+}
+
+.container .box:nth-child(2):before,
+.container .box:nth-child(2):after
+{
+  background: linear-gradient(315deg, #FFD700, #FF6B35)
+}
+
+.container .box:nth-child(3):before,
+.container .box:nth-child(3):after
+{
+  background: linear-gradient(315deg, #1565C0, #00BCD4)
+}
+
+.container .box:nth-child(4):before,
+.container .box:nth-child(4):after
+{
+  background: linear-gradient(315deg, #D50000, #FF4081)
+}
+
+.container .box:nth-child(5):before,
+.container .box:nth-child(5):after
+{
+  background: linear-gradient(315deg, #4dff03, #00d0ff)
+}
+
+.container .box:nth-child(6):before,
+.container .box:nth-child(6):after
+{
+  background: linear-gradient(315deg, #85B7EB, #378ADD)
+}
+
+.container .box span
+{
+  display: block;
+  position: absolute;
+  top: 0;
   left: 0;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.5s ease-out;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.container .box span::before
+{
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px); /* blur do quadradinho de cima da animacao */
+  opacity: 0;
+  transition: 0.1s;  
+  animation: animate 2s ease-in-out infinite;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08)
+}
+
+.container .box:hover span::before
+{
+  top: -50px;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+}
+
+.container .box span::after
+{
+  content:'';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px); /* blur do quadradinho de baixo da animacao */
+  opacity: 0;
+  transition: 0.5s;
+  animation: animate 2s ease-in-out infinite;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  animation-delay: -1s;
+}
+
+.container .box:hover span:after
+{
+  bottom: -50px;
+  right: 50px;
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+}
+
+@keyframes animate
+{
+  0%, 100%
+  {
+    transform: translateY(10px);
+  }
+  
+  50%
+  {
+    transform: translate(-10px);
+  }
+}
+
+.container .box .content
+{
+  position: relative;
+  left: 0;
+  padding: 20px 40px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px); /* blur da cor do fundo */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 1;
+  transform: 0.5s;
+  color: #fff;
+}
+
+.container .box:hover .content
+{
+  left: -25px;
+  padding: 60px 40px;
+}
+
+.container .box .content h2
+{
+  font-size: 2em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.container .box .content p
+{
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  line-height: 1.4em;
+}
+
+.container .box .content a
+{
+  display: inline-block;
+  font-size: 1.1em;
+  color: #111;
+  background: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.container .box .content a:hover
+{
+  background: #ffcf4d;
+  border: 1px solid rgba(255, 0, 88, 0.4);
+  box-shadow: 0 1px 15px rgba(1, 1, 1, 0.2);
 }
 
 
-.hover-underline:hover::after{
-    transform: scaleX(1);
+.imgcontent{
+  display: flex;
+  align-items: center;
 }
 
-
+.imgHabilidades{
+  width: 100px;
+  height: auto;
+}

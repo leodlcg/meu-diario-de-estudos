@@ -1,13 +1,13 @@
 body {
   display: flex;
   flex-direction: column;
-  background-color: aqua;
+  background-color: #050a05;
   margin: 0;
   box-sizing: border-box; /* evita estourar por padding */
 }
 
 #menu {
-  background-color: blueviolet;
+  background-color: #aa66b3;
   padding: 2vh 2vw; /* espaçamento interno responsivo */
   display: flex;        /* adicionado */
   justify-content: center;
@@ -23,5 +23,15 @@ body {
 
 .linkMenu {
   font-size: clamp(14px, 3vmin, 24px); /* mínimo, fluido, máximo */
-  color: white;
+  font-family: "Matemasie", sans-serif;
+  color: #deefdf;
+  transition: transform 0.2s;
+}
+
+.linkMenu:hover {
+  font-size: clamp(14px, 3vmin, 24px); /* mínimo, fluido, máximo */
+  font-family: "Matemasie", sans-serif;
+  color: #deefdf;
+  transition: transform 0.2s;
+  transform: scale(1.2);
 }
