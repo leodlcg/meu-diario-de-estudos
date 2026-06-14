@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Nome</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+    <div class="container_voluntarios_cadastrar">
+
+        <div class="form-header">
+            <div class="badge">✦ Cadastro</div>
+            <h1>Novo Voluntário</h1>
+            <p>Preencha os dados e selecione os núcleos</p>
+        </div>
+
+        <div class="field-row">
+            <div class="field">
+                <label for="prenome">Prenome</label>
+                <input type="text" id="prenome" placeholder="João" maxlength="8" required/>
+            </div>
+            <div class="field">
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" id="sobrenome" placeholder="Silva" maxlength="8" required/>
+            </div>
+        </div>
+
+        <div class="divider">Núcleos</div>
+
+        <div class="options">
+
+            <div class="option">
+                <input type="checkbox" id="op1" value="NCC" />
+                <label for="op1">
+                    <span class="box">
+                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
+                            <path d="M1 5L4.5 8.5L11 1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    Comunicação e Conscientização
+                </label>
+            </div>
+
+            <div class="option">
+                <input type="checkbox" id="op2" value="NCRP" />
+                <label for="op2">
+                    <span class="box">
+                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
+                            <path d="M1 5L4.5 8.5L11 1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    Recursos e Parcerias
+                </label>
+            </div>
+
+            <div class="option">
+                <input type="checkbox" id="op3" value="NIO" />
+                <label for="op3">
+                    <span class="box">
+                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
+                            <path d="M1 5L4.5 8.5L11 1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    Infraestrutura e Operações
+                </label>
+            </div>
+
+            <div class="option">
+                <input type="checkbox" id="op4" value="NTI" />
+                <label for="op4">
+                    <span class="box">
+                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
+                            <path d="M1 5L4.5 8.5L11 1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    Tecnologia da Informação
+                </label>
+            </div>
+
+            <div class="option">
+                <input type="checkbox" id="op5" value="NBA" />
+                <label for="op5">
+                    <span class="box">
+                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
+                            <path d="M1 5L4.5 8.5L11 1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    Bem-estar Animal
+                </label>
+            </div>
+
+        </div>
+
+        <button id="btnCadastrar" onclick="cadastrar()">Salvar</button>
+        <p id="mensagem"></p>
+        <a href="index.html" id="linkVoltar"><h2>Voltar</h2></a>
+
+    </div>
+
+    <script src="js/admin.js"></script>
+
+
+    <div class="container_voluntarios">
+
+        <section id="voluntarios">
+
+            <h1 class="voluntarios_titulo">Voluntarios</h1>
+
+            <div id="content_voluntarios">
+
+                <!-- section construida pelo JS  -->
+
+            </div>
+
+            <a href="index.html" id="linkVoltar"><h2>Voltar</h2></a>
+
+        </section>
+
+    </div>
+
+</body>
+
+<script src="js/admin.js"></script>
+
+</html>
